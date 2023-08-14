@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 
 import entities.Product;
+import util.ProductPredicate;
 
 public class App002 {
 
@@ -28,7 +29,7 @@ public class App002 {
 		list.forEach(System.out::println);
 		System.out.println("-------------");
 		
-		list.removeIf(p -> p.getPrice() >= 100);
+		list.removeIf(new ProductPredicate());
 		list.forEach(System.out::println);
 		
 
