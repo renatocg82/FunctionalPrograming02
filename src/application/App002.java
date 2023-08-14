@@ -29,7 +29,7 @@ public class App002 {
 		list.forEach(System.out::println);
 		System.out.println("-------------");
 		
-		list.removeIf(Product :: staticProductPredicate);
+		list.removeIf(Product :: nonStaticProductPredicate);
 		list.forEach(System.out :: println);
 		
 
