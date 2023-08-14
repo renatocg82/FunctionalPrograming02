@@ -29,9 +29,7 @@ public class App002 {
 		list.forEach(System.out::println);
 		System.out.println("-------------");
 		
-		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
-		
-		list.removeIf(pred);
+		list.removeIf(p -> p.getPrice() >= 100.0);
 		list.forEach(System.out :: println);
 		
 
