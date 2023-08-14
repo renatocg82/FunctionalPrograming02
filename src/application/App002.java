@@ -29,12 +29,12 @@ public class App002 {
 		list.forEach(System.out::println);
 		System.out.println("-------------");
 		
-		list.removeIf(new ProductPredicate());
-		list.forEach(System.out::println);
+		list.removeIf(Product :: staticProductPredicate);
+		list.forEach(System.out :: println);
 		
 
 	}
-
+	
 	public static int compareProducts(Product p1, Product p2) {
 		return p1.getPrice().compareTo(p2.getPrice());
 	}
