@@ -3,9 +3,9 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Predicate;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class App002 {
 
@@ -29,7 +29,9 @@ public class App002 {
 		list.forEach(System.out::println);
 		System.out.println("-------------");
 		
-		list.removeIf(Product :: nonStaticProductPredicate);
+		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
+		
+		list.removeIf(pred);
 		list.forEach(System.out :: println);
 		
 
